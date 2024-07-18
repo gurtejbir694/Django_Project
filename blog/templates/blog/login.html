@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>The Bookshop</title>
+  {% load static %}
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Construction Html5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Constra HTML Template v1.0">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'blog/images/favicon.png' %}" />
+  
+  <!-- Themefisher Icon font -->
+  <link rel="stylesheet" href="{% static 'blog/plugins/themefisher-font/style.css' %}">
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="{% static 'blog/plugins/bootstrap/css/bootstrap.min.css' %}">
+  
+  <!-- Animate css -->
+  <link rel="stylesheet" href="{% static 'blog/plugins/animate/animate.css' %}">
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" href="{% static 'blog/plugins/slick/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'blog/plugins/slick/slick-theme.css' %}">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+
+</head>
+
+<body id="body">
+
+<section class="signin-page account">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="block text-center">
+          <a class="logo" href="{% url "/" %}">
+            <svg width="135px" height="29px" viewBox="0 0 220 30" version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="30"
+								font-family="AustinBold, Austin" font-weight="bold">
+								<g id="Group" transform="translate(-108.000000, -297.000000)" fill="#000000">
+									<text id="AVIATO">
+										<tspan x="109" y="325">The Bookshop</tspan>
+									</text>
+								</g>
+							</g>
+						</svg>
+          </a>
+          <h2 class="text-center">Welcome Back</h2>
+          <form class="text-left clearfix" action="#" method="post" >
+            {% csrf_token %}
+            <div class="form-group">
+              <input type="email" class="form-control"  placeholder="Email" name="email">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" name="passwd">
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-main text-center" >Login</button>
+            </div>
+          </form>
+          <p class="mt-20">New in this site ?<a href="{% url "signin" %}"> Create New Account</a></p>
+          <p>{{msg}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+    
+    <!-- Main jQuery -->
+    <script src="{% static 'blog/plugins/jquery/dist/jquery.min.js' %}"></script>
+    <!-- Bootstrap 3.1 -->
+    <script src="{% static 'blog/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- Bootstrap Touchpin -->
+    <script src="{% static 'blog/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js' %}"></script>
+    <!-- Instagram Feed Js -->
+    <script src="{% static 'blog/plugins/instafeed/instafeed.min.js' %}"></script>
+    <!-- Video Lightbox Plugin -->
+    <script src="{% static 'blog/plugins/ekko-lightbox/dist/ekko-lightbox.min.js' %}"></script>
+    <!-- Count Down Js -->
+    <script src="{% static 'blog/plugins/syo-timer/build/jquery.syotimer.min.js' %}"></script>
+
+    <!-- slick Carousel -->
+    <script src="{% static 'blog/plugins/slick/slick.min.js' %}"></script>
+    <script src="{% static 'blog/plugins/slick/slick-animation.min.js' %}"></script>
+
+
+    <!-- Main Js File -->
+    <script src="{% static 'blog/js/script.js' %}"></script>
+    
+
+
+  </body>
+  </html>
